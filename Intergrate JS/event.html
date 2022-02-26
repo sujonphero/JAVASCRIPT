@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+
+    <h1>Learning to click event</h1>
+
+    <!-- first and simple step for onclick event -->
+    <button onclick="document.body.style.backgroundColor='red'">click me red</button>
+
+       
+    <!-- second step for onclick event -->
+    <button onclick="makeYellow()">click me yellow</button>
+
+    <!-- third step for onclick event -->
+    <button id="blueButton">click me blue</button>
+
+    <!-- fourth step for onclick event -->
+    <button id="greenButton">click me green</button>
+
+    <!-- fiveth step for onclick event -->
+    <button id="orangeButton">click me orange</button>
+
+    <!-- six step for onclick event -->
+    <button id="aquaButton">click me aqua</button>
+
+    <!-- seven step for onclick event -->
+    <button id="pinkButton">click me pink</button> 
+
+
+    <br><br><br>
+
+    <!-- --------------------------------------------------------------------- -->
+
+    <!-- most using method with onclick function -->
+    <h1>Most using method</h1>
+
+    <p id="paragraph"></p>
+    <button onclick="clickMeButton()">click me</button>
+
+    <!-- most using method with id onclick function. -->
+    <p id="paragraph2"></p>
+    <button id="addingButton">surprised</button>
+
+    <!-- most using method with id onclick function just another way. -->
+    <p id="updateText"></p>
+    <input id="updateInput" type="text">
+    <button id="updateButton">update</button>
+
+
+    <!-- add js script link -->
+    <script>
+        // second step for onclick event.
+function makeYellow(){
+    document.body.style.backgroundColor = 'yellow';
+}
+
+// third step for onclick event.
+const makeBlue = document.getElementById('blueButton');
+// just set the fucntion name.
+makeBlue.onclick = makeBlueButton;
+// create the function.
+function makeBlueButton(){
+    document.body.style.backgroundColor = 'blue';
+}
+
+
+// fourth step for onclick event with anonimys function.
+const makeGreen = document.getElementById('greenButton');
+makeGreen.onclick = function() {
+    document.body.style.backgroundColor = "green";
+}
+
+
+// fivth step for onclick event with addevenlistener function.
+const makeGolden = document.getElementById('orangeButton');
+makeGolden.addEventListener ('click',makeOrangeButton);
+function makeOrangeButton(){
+    document.body.style.backgroundColor = 'orange';
+}
+
+
+// six step for onclick event with addevenlistener function.
+const makeAqua = document.getElementById('aquaButton');
+makeAqua.addEventListener('click',function(){
+    document.body.style.backgroundColor = 'Aqua';
+})
+
+
+// seven step for onclick event with addevenlistener function.
+document.getElementById('pinkButton').addEventListener ('click',function(){
+    document.body.style.backgroundColor = 'pink';
+})
+
+// --------------------------------------------------------------------- //
+
+// most using method with onclick function.
+function clickMeButton (){
+    const ptag = document.getElementById('paragraph');
+    ptag.innerText = ('hello dear! you do it');
+}
+
+// most using method with id onclick function.
+document.getElementById('addingButton').addEventListener('click',function(){
+    const ptag2 = document.getElementById('paragraph2');
+    ptag2.innerText = 'surprised tnx duds';
+})
+
+// most using method with id onclick function just another way.
+document.getElementById('updateButton').addEventListener('click',function(){
+    const textInput = document.getElementById('updateInput');
+    updateText.innerText = textInput.value;
+    textInput.value = '';
+    console.log(textInput);
+})
+    </script>
+    
+</body>
+</html>
